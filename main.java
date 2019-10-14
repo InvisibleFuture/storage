@@ -30,6 +30,7 @@ public class main {
 
     public static void main(String[] args) {
         System.out.println("Start !");
+
         String url = "http://api.map.baidu.com/telematics/v3/weather?location=%E6%88%90%E9%83%BD&output=json&ak=rnm8udmHdWaHFWZTO2tuTiG8";
         String json = loadJson(url);
         System.out.println(json);
@@ -37,10 +38,5 @@ public class main {
         JSONObject jsonObject = new JSONObject(json);
         String message = jsonObject.getString("message");
         System.out.println(message);
-
-        //JSONObject object = jsonObject.getJSONObject("result");
-        //String province = object.getString("");
-        //String city=object.getString("city");
-        //String areacode=object.getString("areacode");
     }
 }
